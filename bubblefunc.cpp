@@ -14,17 +14,16 @@ void * _bubblesort_(void * _array_, void (*_puntero_) (void *, int _i, int _k),i
 /*------FUNCTIONS------*/
 
 void  _b_int_ (void * _vector_, int _i,int _k){
-    int * _array_ = (int *) _vector_;
-    if( _array_[_i] < _array_[_k]){
-        int temp = _array_[_i];
-        _array_[_i] = _array_[_k];
-        _array_[_k] = temp;
+    if( ((int *) _vector_)[_i] > ((int *) _vector_)[_k]){
+        int temp = ((int *) _vector_)[_i];
+        ((int *) _vector_)[_i] = ((int *) _vector_)[_k];
+        ((int *) _vector_)[_k] = temp;
     }
 }
 
 void  _b_float_ (void * _vector_, int _i,int _k){
     float * _array_ = (float *) _vector_;
-    if( _array_[_i] < _array_[_k]){
+    if( _array_[_i] > _array_[_k]){
         int temp = _array_[_i];
         _array_[_i] = _array_[_k];
         _array_[_k] = temp;
@@ -32,20 +31,18 @@ void  _b_float_ (void * _vector_, int _i,int _k){
 }
 
 void  _b_double_ (void * _vector_, int _i,int _k){
-    double * _array_ = (double *) _vector_;
-    if( _array_[_i] < _array_[_k]){
-        int temp = _array_[_i];
-        _array_[_i] = _array_[_k];
-        _array_[_k] = temp;
+    if( ((double *) _vector_)[_i] > ((double *) _vector_)[_k]){
+        int temp = ((double *) _vector_)[_i];
+        ((double *) _vector_)[_i] = ((double *) _vector_)[_k];
+        ((double *) _vector_)[_k] = temp;
     }
 }
 
 void  _b_char_ (void * _vector_, int _i,int _k){
-    char * _array_ = (char *) _vector_;
-    if( _array_[_i] < _array_[_k]){
-        int temp = _array_[_i];
-        _array_[_i] = _array_[_k];
-        _array_[_k] = temp;
+    if( ((char *) _vector_)[_i] > ((char *) _vector_)[_k]){
+        int temp = ((char *) _vector_)[_i];
+        ((char *) _vector_)[_i] = ((char *) _vector_)[_k];
+        ((char *) _vector_)[_k] = temp;
     }
 }
 
@@ -82,5 +79,4 @@ int main(){
     }
     return 0;
 }
-
 
